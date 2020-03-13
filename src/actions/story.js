@@ -1,6 +1,7 @@
 import {
     STORIES_ADD,
     STORIES_FETCH,
+    STORIES_FETCH_ERROR
   } from '../constants/actions';
   const doAddStories = stories => ({
     type: STORIES_ADD,
@@ -10,7 +11,12 @@ import {
     type: STORIES_FETCH,
     query,
   });
+  const doFetchErrorStories = error => ({
+    type: STORIES_FETCH_ERROR,
+    error,
+  });
   export {
     doAddStories,
     doFetchStories,
+    doFetchErrorStories
   };

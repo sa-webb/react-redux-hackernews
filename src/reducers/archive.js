@@ -1,7 +1,16 @@
+import { STORY_ARCHIVE } from '../constants/actions';
+
 const INITIAL_STATE = [];
+
+const applyArchiveStory = (state, action) => [...state, action.id];
+
 function archiveReducer(state = INITIAL_STATE, action) {
-  switch(action.type) {
-    default : return state;
+  switch (action.type) {
+    case STORY_ARCHIVE: {
+      return applyArchiveStory(state, action);
+    }
+    default:
+      return state;
   }
 }
 export default archiveReducer;

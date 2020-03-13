@@ -1,6 +1,7 @@
 # Redux = Reducer + Flux
 
 [Tutorial](https://www.robinwieruch.de/react-redux-tutorial)
+[Original Source](https://github.com/taming-the-state-in-react/react-redux-hackernews)
 
 Redux implements a Unidirectional data flow:
 

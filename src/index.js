@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import store from './store';
+import { Provider } from 'react-redux';
 import './index.css';
 import App from './components/App';
 
 ReactDOM.render(
-  <App stories={store.getState().storyState} onArchive={() => {}} />,
-  document.getElementById('root')
+  <Provider store={store}>
+    <App />, document.getElementById('root')
+  </Provider>
 );
